@@ -31,7 +31,7 @@ const RegisterPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/auth/register",
+        "https://newsnest-backend.onrender.com/api/v1/auth/register",
         formData,
         {
           withCredentials: true,
