@@ -31,14 +31,14 @@ const Toaster = ({
       style={
         {
           "--normal-bg": "var(--popover)",
-          "--normal-text": "var(--popover-foreground)",
+          "--normal-text": "#00FF88",
           "--normal-border": "var(--border)",
           "--border-radius": "var(--radius)"
         }
       }
       toastOptions={{
         classNames: {
-          toast: "cn-toast",
+          toast: "cn-toast text-[#00FF88]",
         },
       }}
       {...props} />

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Bookmark, BookmarkCheck, Loader2 } from "lucide-react";
@@ -31,6 +31,10 @@ const StoryCard = ({
   const postedTime = storyPostedAt
     ? new Date(storyPostedAt).toLocaleString()
     : "Unknown time";
+
+  useEffect(() => {
+    setIsBookmarked(Boolean(bookmarked));
+  }, [bookmarked]);
 
   const handleBookmark = async () => {
     if (!isAuthenticated) {
